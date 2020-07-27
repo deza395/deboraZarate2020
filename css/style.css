@@ -1,0 +1,411 @@
+*{
+  box-sizing: border-box; /*1*/
+}
+body{
+  font-family: 'Merriweather', serif; /*11*/
+}
+p{
+  font-size: 20px;
+
+}
+/* ESTILOS DEL NAVBAR */
+header{
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+}
+nav{ /*2*/
+  height: 8vh;   /*3*/
+  width: 100%;
+  background: #d9a200; /*4*/
+  display: flex;
+  justify-content: flex-end;/*13*/
+
+}
+
+.nav-links{ /*5*/
+  display: flex; /*6*/
+    list-style:none; /*12*/
+    width: 80%;    /*15*/
+    height: 100%;  /*16*/
+    justify-content:flex-end;; /*13*/
+    align-items: center; /*17*/
+    padding-right: 20px; /*14*/
+
+}
+
+.nav-links li a{ /*7*/
+  color:white; /*8*/
+  text-decoration: none;/*9*/
+  font-size: 20px;/*10*/
+  padding-right:20px; /*14*/
+
+}
+
+/* FIN DE ESTILO DEL NAVBAR */
+.contenedor{
+  width: 100%;
+  height: 100vh;
+}
+.banner{
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  transition: all 3s ease-in-out;
+  background-image: url('../img/banner-1.jpg');
+  animation: banner 20s infinite linear;
+}
+/* PORTADA */
+.banner-content{
+  width: 100%;
+  height:100%;
+background-color: rgba(0,22,40,.4);
+  display:flex;
+   flex-direction: column;
+   justify-content: center;
+  align-items: center;
+  font-family:sans-serif;
+}
+
+.banner-content h1{
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+
+.banner-content h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.banner-content h2 span{
+  color: #fdc600;
+}
+
+.banner-content a{
+  text-decoration: none;
+  background-color: #fdc600;
+  color:#fff;
+  padding: 9px  35px;
+  border: 1px solid #fdc600;
+  border-radius: 50px;
+}
+/* FIN DE PORTADA */
+
+/* descripcion */
+.sobre-mi{
+  padding-top: 50px;
+
+}
+
+.description{
+  display: flex;
+  flex-direction: column ;
+  align: right;
+}
+
+.description h3{
+  margin: 25px;
+  padding: 10px 50px;
+  border: 1px solid #edbb00;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.img_about{
+  align-items: center;
+
+}
+.img_about img {
+  width: 100%;
+    margin-left: -50px;
+    padding-top: 40px;
+}
+.servicios{
+  background-color: rgba(195, 216, 222, 0.5)
+}
+.contenedor-serv{
+  margin:40px;
+
+  }
+.contenedor-serv h3{
+  padding: 20px 0px 12px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.contenedor-serv p{
+  color:#777;
+}
+.servicios-izq{
+
+  text-align: right;
+}
+
+.phone{
+display: flex;
+align-items: center;
+margin: auto;
+}
+/* portfolio  */
+
+.container h2{
+  font-size: 40px;
+  text-transform: capitalize;
+  text-align: center;
+  align-items: center;
+  ma
+}
+.contenedor-port{
+display: flex;
+flex-flow: wrap;
+ width:100%;
+  height: 600px;
+
+}
+ .box{
+position: relative;
+  margin: 1px;
+  min-width: 33%;
+  height: 300px;
+  background-color: rgb(242, 230, 228);
+  overflow: hidden;
+    transition: .5s;
+  cursor: pointer;
+}
+
+.porfolio .container p {
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.box:after{
+   content: '';
+   position: absolute;
+   z-index: 1;
+   top: 50%;
+   left: 50%;
+   width: 600px;
+   height: 600px;
+   transform: translate(-180%, -50%);
+   background-color: rgba(9, 145, 145, 0.6);
+   border-radius: 50%;
+   transition: 300ms 0ms;
+}
+
+.box:hover:after{
+   transform: translate(-50%, -50%);
+}
+
+
+
+.box img{
+   position: absolute;
+   height: 110%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   transition: .8s;
+}
+
+.box i{
+   top: 60%;
+}
+
+.box h3{
+    top: 30%;
+    font-size: 35px;
+}
+.box p{
+  top: 45%;
+  font-size: 25px;
+}
+.box h3, .box p, .box i{
+  color: #fff;
+
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-2000px, -50%);
+  color: #fff;
+  transition: .7s;
+  transition-timing-function: ease-in;
+}
+
+.box:hover i{
+   transform: translate(-50%, -50%);
+   transition-timing-function: ease;
+}
+
+ .box:hover h3, .box:hover p
+{
+   transform: translate(-50%, -50%);
+   transition-timing-function: ease;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:760px){ /*18*/
+  .line{ /*19*/
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav{   /*20*/
+    position: relative; /*21*/
+
+  }
+  .hamburger{
+    position: absolute; /*22*/
+    cursor: pointer; /*23*/
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%,-50%); /*24*/
+    z-index: 50;  /*32*/
+
+  }
+  .nav-links {
+    position: fixed; /*25*/
+    height: 100vh; /*26*/
+    width: 100%; /*27*/
+    flex-direction: column; /*28*/
+    background: #00b2b2;
+    clip-path: circle(80px at 90% -10%); /*29*/
+    -webkit-clip-path:circle(80px at 90% -10%); /*30*/
+    transition: all 1s ease-out; /*31*/
+    z-index: 10;
+  }
+
+  .nav-links li{
+   text-align: center;
+   margin: auto;
+  }
+  .nav-links.open{   /*33*/
+    clip-path: circle(80px at 90% -10%); /*34*/
+    -webkit-clip-path:circle(1000px at 90% -10%); /*35*/
+  }
+  .img_about{
+   display: none;
+  }
+  .box{
+    width: 49.6%;
+  }
+  .banner-content h1{
+    text-align: center;
+    font-size: 45px;
+  }
+  .banner-content h2{
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+@keyframes banner{
+	0%{
+		background-image: url('../img/banner-1.jpg');
+	}
+	25%{
+		background-image: url('../img/banner-1.jpg');
+	}
+
+
+	26%{
+		background-image: url('../img/banner-2.jpg');
+	}
+	50%{
+		background-image: url('../img/banner-2.jpg');
+	}
+
+
+	51%{
+		background-image: url('../img/banner-3.jpg');
+	}
+	75%{
+		background-image: url('../img/banner-3.jpg');
+	}
+
+
+	76%{
+		background-image: url('../img/banner-4.jpg');
+	}
+	100%{
+		background-image: url('../img/banner-4.jpg');
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+1= incluir el padding y el borde en el ancho y alto total de un elemento.
+2= cuanod quiero darle un etilo a una etiqueta solo pongo el nomvre de la etiqueta sin .
+3= aca le estoy diciendo que tenga el 10% del alto de mi viewport que es mui hoja de vista (ventana)
+4= el background es el color de fono, hay tres maneras de poner color, una es con codigo, la otra nombrando eln nombere del color o con la convinacion rgb
+5= cuando quiero agregar estilos a una  clase tengo que poner punto, asi  .nombreDeLaClase {}
+6= existen dos tipos de elemettos los que ocupan todo el ancho que pueden y los que ocupan solo una parte, en lineas generales si nosotros queremos que los elementos de un contenedor esten uno allado del otro utilizamos la porpiedad display: flex;
+7= esta cadena es interesante para saber el orden que tengo que poner m=para acceder  a modificar el estilo de algun elemento, aca le estoy diciendo, de la clase nav-links accede a los li y de los li accede a las a para modificar su estilo
+8= otra manera de modificar el color, de la letra no de wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6
+9= con esta propiedad le estamo sacando el subrayado que viene  por defecto con las etiquetas "a", ya que sirven para linkear
+10= con la propiedad font size le doy el alto a mis letras
+11= es la fuente de todo el texto que va a estar en en cuerpo de la pagina, co  esto me ahorro de escribirlo en todas las propiedades. a menos que quiera diferenciar alguno
+12= con list style le saco los puntos que vienen por ferecto cuando uso la etiqueta li (de lista)
+13= cuando pongo flex como vemos arriba me da libertad de mover mi contenido y con esta propiedad le digo poneme el contenido que tengo en navbar (en este caso solo el div nav-links )a el final oseaca la derecha
+14= paddin es relleno, le doy un relleno a la deecha de 20 px
+15= le estoy diciendo que ocupe el 80% del ancho de su contenedor que en este caso es navbar
+16= le estoy diciendo que ocupe el 100% del alto del contenedor, este este caso de nav
+17= me alinea los elementos de mi contenedor en el centro (tengo que tener display flex)
+18= CUANDO YO QUIERO HACER UNa pagina web responsive y adaptativa (18 bis)
+19= todo lo qeu va dentro de mi @ media screen va a uncionar solo para ese parametro, osea todo lo que yo haga aca solo se va a haver hasta cunndo la patnalla tiene un maximo de 760 px
+20= para mover y realizar ciertas acciones, la posicion es muy importante.  en este caso relative su movimiento es con respecto a si mismo pero es importante que si queremos mover algo DENTRO  de un elemento, debemos poner al elemento padre con posision relative y al elementos hijo como absolute para que tome como parametro el espacio del contenedor padre
+22= como dijimos antes, dentro del nab=v  esta hamburger y yo ahora muero hamburger con respectoa su contenedor padre (5 y 50 $ del contenedor padre
+23= con la propiedad cursor le estoy indicando que haga algo cuando ponga el cursor ahi, con poiner le pone como una manito de cliclea aca
+24= cuando muevo algo con porcentajes posiblemente no me quede en el medio como quieri, en este caso yo le dije que se mueva en la posicion 50% con respecto al margen superior de nav y 5 con respecto al margen derecho pero no me quedo centrado porque me lo mueve tomando como refenrecia el punto superior izquiero, entonces uso transform y le digo que se mueva de su posicion -5 a la derecha y -50 para arriba para quedar centrado de su posiscion medio raro de explicar lo siento anda probando y fijate vos solo ah
+25= position fixed es darle una posicion fija, en este caso los nax links  pase lo que pase va a estar en esa posicion
+26= le digo que tome el 100% de el alto de su elemento
+27= 100 del ancho
+28= le estoy diciendo que ponda mi contenido en forma de columna
+29= es muy falopa esta prpipedad pero te crea como una porcion de elemento en este caso le pusimos que sea un circulo de determinado radio y luego ponemos at y le pasamos la posicion, sera con respecto a su contenedor o a no se que la verdad
+30= la verdad no comprendo muy bien pero, los navegadores muchas veces necesitan alguna palabra de soporte para codigicar algun tipo de codigo y en chrome es webkit,
+31= transition permite definir la transsion entre dos estados de un elemento,
+32= z index sirve para superponer algo sobre otro elemento.
+33= esto es algo bastante interesante, aca yo estoy dandole propiedades a la clase open, que vendria a reemplazar a la clase nav-links pero no lo cambio en el html porque yo quiero que esto solo pase cuando el viewport es menor que 4760 , entinces alterno la clase con js
+34= le doy el valor final que va a tomar mi circulo cuando haga click en la hauhurgues a que justamente eso lo configuro en js
+
+*/
+
+/* ACLARACIONES MAS PROFUNDAS
+DISENIO ADAPTATIVOS
+un diseño adaptativo lo que hace es justamente adaptarse el tamaño de las pantalas, yo pudo variar la disposicion de mi contenido segun los firents vieports. es un poco mas sencillo a nivel codigo
+ pero el diseño responsive no solo se adapta sino que optimiza los espacios para una mejor usabilidad
+
+ */
